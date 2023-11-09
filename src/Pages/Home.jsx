@@ -10,7 +10,7 @@ function Home() {
         <img
           class="new-inventory"
           src="single-resource-front-end/src/assets/new-inventory.jpeg"
-          alt=""
+          alt="cartoon checks inventory"
         />
       </section>
       <section>
@@ -18,7 +18,7 @@ function Home() {
         <img
           class="track-inventory"
           src="single-resource-front-end/src/assets/track-inventory.jpeg"
-          alt=""
+          alt="cartoon checks boxes for inventory"
         />
       </section>
       <section>
@@ -26,7 +26,7 @@ function Home() {
         <img
           class="manage-inventory"
           src="single-resource-front-end/src/assets/manage-inventory.avif"
-          alt=""
+          alt="cartoon warehouse worker checks inventory"
         />
       </section>
     </div>
