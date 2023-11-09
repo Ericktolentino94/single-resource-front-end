@@ -10,7 +10,7 @@ function Home() {
         <img
           class="new-inventory"
           src="single-resource-front-end/src/assets/new-inventory.jpeg"
-          alt="cartoon checks inventory"
+          alt="cartoon checks new inventory"
         />
       </section>
       <section>
