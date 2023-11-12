@@ -20,7 +20,7 @@ function Makeups() {
          <div className = "Makeups">
             <div>
                 {makeups.map((makeup) => {
-                    return <Makeup key ={makeup.id} makeup={makeup} />
+                    return <Makeup key ={makeup.id} makeup={makeup} index={makeup.id} />
                 })}
             </div>
 

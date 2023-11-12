@@ -3,7 +3,7 @@ import Makeups from "../Components/Makeups";
 function Index () {
     return (
         <div className = "Index">
-            <h2>Index</h2>
+            <h2>Vanity Drawer</h2>
             <Makeups />
         </div>
     ); 

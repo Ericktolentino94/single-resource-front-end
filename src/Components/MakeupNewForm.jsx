@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = "http://localhost:8888"
 
 function NewMakeupForm() {
+  const navigate = useNavigate();
   const [makeup, setMakeup] = useState({
     name: "",
     image: "",
@@ -12,28 +13,24 @@ function NewMakeupForm() {
     cost: 0,
   });
 
-  const navigate = useNavigate();
-
-  const handleTextChange = (event) => {
-    setMakeup({ ...makeup, [event.target.id]: event.target.value });
-  };
-
+  // Add a makeup. Redirect to the index view.
   const addMakeup = () => {
-    const httpOptions = {
+    fetch(`${API}/makeups`, {
       method: "POST",
       body: JSON.stringify(makeup),
       headers: {
         "Content-Type": "application/json",
       },
-    };
-
-    fetch(`${API}/makeups`, httpOptions)
-      .then((res) => res.json())
-      .then((data) => {
+    })
+      .then(() => {
         alert(`${makeup.name} added`);
-        navigate("/makeups");
+        navigate(`/makeups`);
       })
-      .catch((err) => console.error(err));
+      .catch((error) => console.error("catch", error));
+  };
+
+  const handleTextChange = (event) => {
+    setMakeup({ ...makeup, [event.target.id]: event.target.value });
   };
 
   const handleSubmit = (event) => {
@@ -42,74 +39,56 @@ function NewMakeupForm() {
   };
 
   return (
-    <div className="container">
-      <div className="New">
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              id="name"
-              value={makeup.name}
-              type="text"
-              onChange={handleTextChange}
-              className="form-control"
-              placeholder="Name of Makeup"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="image">Image URL</label>
-            <input
-              id="image"
-              value={makeup.image}
-              type="text"
-              onChange={handleTextChange}
-              className="form-control"
-              placeholder="Image URL"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="link">Link</label>
-            <input
-              id="link"
-              value={makeup.link}
-              type="text"
-              onChange={handleTextChange}
-              className="form-control"
-              placeholder="Product link"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="category">Category</label>
-            <input
-              id="category"
-              value={makeup.category}
-              type="text"
-              onChange={handleTextChange}
-              className="form-control"
-              placeholder="Category"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="cost">Cost</label>
-            <input
-              id="cost"
-              value={makeup.cost}
-              type="number"
-              onChange={handleTextChange}
-              className="form-control"
-              placeholder="Cost"
-              required
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Add Makeup
-          </button>
-        </form>
-      </div>
+    <div className="New">
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          id="name"
+          value={makeup.name}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Name of Makeup"
+          required
+        />
+        <label htmlFor="image">Image URL:</label>
+        <input
+          id="image"
+          value={makeup.image}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Image URL"
+          required
+        />
+        <label htmlFor="link">Link:</label>
+        <input
+          id="link"
+          value={makeup.link}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Product link"
+          required
+        />
+        <label htmlFor="category">Category:</label>
+        <input
+          id="category"
+          value={makeup.category}
+          type="text"
+          onChange={handleTextChange}
+          placeholder="Category"
+          required
+        />
+        <label htmlFor="cost">Cost:</label>
+        <input
+          id="cost"
+          value={makeup.cost}
+          type="number"
+          onChange={handleTextChange}
+          placeholder="Cost"
+          required
+        />
+        <br />
+        <input type="submit" />
+      </form>
     </div>
   );
 }
