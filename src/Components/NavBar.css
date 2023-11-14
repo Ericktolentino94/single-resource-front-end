@@ -1,0 +1,41 @@
+nav {
+    background-color: #ffc8dd; /* Background color */
+    color: pink; /* Text color */
+    padding: 10px 0; /* Padding at the top and bottom */
+  }
+  
+  h1 {
+    margin: 0; /* Remove margin to align text with the top of the nav bar */
+    font-size: 24px; /* Font size for the title */
+  }
+  
+  h1 a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #a2d2ff; /* Text color for the link */
+  }
+  
+  button {
+    background-color: rgb(71, 143, 181); /* Button background color */
+    color: pink; /* Button text color */
+    border: none;
+    padding: 10px 20px; /* Button padding */
+    margin-top: 10px; /* Add margin to separate the button from the title */
+  }
+  
+  button a {
+    background-color: rgb(255, 0, 225);
+    color: pink; 
+    border: none;
+    margin-top: 10px;
+  }
+  
+
+  button:hover {
+    background-color: rgb(69, 133, 160);
+    cursor: pointer; 
+  }
+  
+  Nav {
+    display: flex;
+    justify-content: space-around;
+  }
