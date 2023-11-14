@@ -23,7 +23,7 @@ function App() {
             <Route path="/makeups/new" element={<New />} />
             <Route exact path="/makeups/:id" element={<Show />} />
             <Route path="/makeups/:id/edit" element={<Edit />} />
-            <Route path="*" element={<FourOFour />} />
+            <Route path="*" element={<FourOFour />}  />
           </Routes>
         </main>
       </Router>
