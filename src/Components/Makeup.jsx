@@ -28,7 +28,6 @@ const Makeup = ({ makeup, index }) => {
       <Link to={`/makeups/${makeup.id}/edit`} className="edit-link">
         ✏️ Edit
       </Link>
-      {/* Add any additional details or links as needed */}
     </div>
   );
 };

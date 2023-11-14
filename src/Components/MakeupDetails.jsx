@@ -39,7 +39,7 @@ function MakeupDetails() {
             <p className="card-text">Link: <a href={makeup.link} target="_blank" rel="noopener noreferrer">{makeup.link}</a></p>
             <p className="card-text">Category: {makeup.category}</p>
             <p className="card-text">Cost: ${makeup.cost}</p>
-            {/* Add more details about the makeup */}
+      
           </div>
           <div className="card-footer">
             <Link to="/makeups" className="btn btn-primary">
