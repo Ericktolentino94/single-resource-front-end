@@ -1,0 +1,61 @@
+/* MakeupDetails.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 400px; /* Adjust the width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .img-fluid {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .card-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .btn {
+    margin-left: 10px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
+  

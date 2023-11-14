@@ -1,0 +1,14 @@
+
+
+.Makeups {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Adjust the gap as needed */
+  }
+
+  @media (max-width: 768px) {
+    .Makeups {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  }
+  
