@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = "http://localhost:8888"
 
 function MakeupEditForm() {
   let { id } = useParams();
@@ -20,31 +20,37 @@ function MakeupEditForm() {
   };
 
   
-  const updateMakeup = () => {
-    fetch(`${API}/makeups/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(makeup),
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const updateMakeup = () => {
+       fetch(`${API}/makeups/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(makeup),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
     })
-      .then((response) => {
-        navigate(`/makeups/${id}`);
-      })
-      .catch((error) => console.error("catch", error));
-  };
-
- 
-  useEffect(() => {
-    fetch(`${API}/makeups/${id}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((responseJSON) => {
-        setMakeup(responseJSON);
-      })
-      .catch((error) => console.error(error));
-  }, [id]);
+    .then((updatedMakeup) => {
+      navigate(`/makeups/${id}`);
+    })
+    .catch((error) => console.error("catch", error));
+};
+      
+      useEffect(() => {
+        fetch(`${API}/makeups/${id}`)
+          .then((response) => {
+            return response.json();
+          })
+          .then((responseJSON) => {
+            setMakeup(responseJSON);
+          })
+          .catch((error) => console.error(error));
+      }, [id]);
+  
 
   const handleSubmit = (event) => {
     event.preventDefault();

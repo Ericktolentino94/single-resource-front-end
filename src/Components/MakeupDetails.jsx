@@ -27,32 +27,34 @@ function MakeupDetails() {
       .catch((error) => console.log(error));
   };
 
-  return (
-    <article>
-      <h3>{/* Add your makeup rating logic here */}</h3>
-      <h5>
-        <span>
-          <a href={makeup.link}>{makeup.name}</a>
-        </span>
-        &nbsp;&nbsp;&nbsp;&nbsp; {makeup.link}
-      </h5>
-      <h6>{makeup.category}</h6>
-      {/* Add more details about the makeup */}
-      <div className="showNavigation">
-        <div>
-          <Link to={`/makeups`}>
-            <button>Back</button>
-          </Link>
+    return (
+      <div className="container mt-5">
+        <div className="card">
+          <div className="card-header">
+            <h3>Details</h3>
+          </div>
+          <div className="card-body">
+            <h4 className="card-title"> {makeup.name}</h4>
+            <p className="card-text">Image: <img src={makeup.image} height="200px"alt={makeup.name} style={{ maxWidth: "100%" }} /></p>
+            <p className="card-text">Link: <a href={makeup.link} target="_blank" rel="noopener noreferrer">{makeup.link}</a></p>
+            <p className="card-text">Category: {makeup.category}</p>
+            <p className="card-text">Cost: ${makeup.cost}</p>
+      
+          </div>
+          <div className="card-footer">
+            <Link to="/makeups" className="btn btn-primary">
+              Back
+            </Link>
+            <Link to={`/makeups/${makeup.id}/edit`} className="btn btn-warning ml-2">
+              Edit
+            </Link>
+            <button onClick={handleDelete} className="btn btn-danger ml-2">
+              Delete
+            </button>
+          </div>
         </div>
-        <div>
-          <Link to={`/makeups/${id}/edit`}>
-            <button>Edit</button>
-          </Link>
-        </div>
-        <button onClick={handleDelete}>Delete</button>
       </div>
-    </article>
-  );
-}
-
-export default MakeupDetails;
+    );
+  }
+  
+  export default MakeupDetails;  
