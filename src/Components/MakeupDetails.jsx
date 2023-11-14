@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import "./MakeupDetails.css"
+
 const API = import.meta.env.VITE_API_URL;
 
 function MakeupDetails() {

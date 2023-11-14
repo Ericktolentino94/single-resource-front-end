@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Makeup from "./Makeup";
+import "./Makeups.css"
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -17,8 +18,8 @@ function Makeups() {
         });
     }, []);
     return (
-         <div className = "Makeups">
-            <div>
+         <div>
+            <div className = "Makeups">
                 {makeups.map((makeup) => {
                     return <Makeup key ={makeup.id} makeup={makeup} index={makeup.id} />
                 })}

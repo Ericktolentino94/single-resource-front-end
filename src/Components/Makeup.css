@@ -1,7 +1,49 @@
-.Makeups {
+
+
+.makeup-container {
     display: flex;
-    
-    .img {
-        height:100px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+  }
+  
+  .makeup-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-body {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 8px 8px; 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .makeup-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .edit-link,
+  .btn-danger {
+    margin-top: 15px;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .makeup-container {
+      max-width: 100%;
     }
-}
+  }
+  
