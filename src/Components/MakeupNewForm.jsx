@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
-const API = "http://localhost:8888"
+const API = "http://localhost:8888";
 
 function NewMakeupForm() {
   const navigate = useNavigate();
@@ -39,55 +40,70 @@ function NewMakeupForm() {
   };
 
   return (
-    <div className="New">
+    <div className="New container mt-4">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          id="name"
-          value={makeup.name}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Name of Makeup"
-          required
-        />
-        <label htmlFor="image">Image URL:</label>
-        <input
-          id="image"
-          value={makeup.image}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Image URL"
-          required
-        />
-        <label htmlFor="link">Link:</label>
-        <input
-          id="link"
-          value={makeup.link}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Product link"
-          required
-        />
-        <label htmlFor="category">Category:</label>
-        <input
-          id="category"
-          value={makeup.category}
-          type="text"
-          onChange={handleTextChange}
-          placeholder="Category"
-          required
-        />
-        <label htmlFor="cost">Cost:</label>
-        <input
-          id="cost"
-          value={makeup.cost}
-          type="number"
-          onChange={handleTextChange}
-          placeholder="Cost"
-          required
-        />
-        <br />
-        <input type="submit" />
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input
+            id="name"
+            value={makeup.name}
+            type="text"
+            className="form-control"
+            onChange={handleTextChange}
+            placeholder="Name of Makeup"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="image" className="form-label">Image URL:</label>
+          <input
+            id="image"
+            value={makeup.image}
+            type="text"
+            className="form-control"
+            onChange={handleTextChange}
+            placeholder="Image URL"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="link" className="form-label">Link:</label>
+          <input
+            id="link"
+            value={makeup.link}
+            type="text"
+            className="form-control"
+            onChange={handleTextChange}
+            placeholder="Product link"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="category" className="form-label">Category:</label>
+          <input
+            id="category"
+            value={makeup.category}
+            type="text"
+            className="form-control"
+            onChange={handleTextChange}
+            placeholder="Category"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="cost" className="form-label">Cost:</label>
+          <input
+            id="cost"
+            value={makeup.cost}
+            type="number"
+            className="form-control"
+            onChange={handleTextChange}
+            placeholder="Cost"
+            required
+          />
+        </div>
+
+        <input type="submit" className="btn btn-primary" />
       </form>
     </div>
   );
