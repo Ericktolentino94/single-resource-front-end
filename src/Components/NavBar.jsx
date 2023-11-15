@@ -6,14 +6,14 @@ export default function NavBar() {
         <div>
               <nav className="Nav">
         <h1>
+            <Link to="/">The Make Up Vault</Link>
+        </h1>
+        <h1>
           <Link to="/makeups">Makeup</Link>
         </h1>
         <button>
           <Link to="/makeups/new">New Makeup</Link>
         </button>
-        <h1>
-            <Link to="/">The Make Up Vault</Link>
-        </h1>
       </nav>
     </div>
         

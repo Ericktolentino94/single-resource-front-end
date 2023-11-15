@@ -1,4 +1,5 @@
 import Makeups from "../Components/Makeups";
+import "./Index.css"
 
 function Index () {
     return (
