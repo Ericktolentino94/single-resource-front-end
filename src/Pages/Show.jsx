@@ -1,8 +1,9 @@
 import MakeupDetails from "../Components/MakeupDetails";
+import "./Show.css"
 
 function Show() {
     return (
-        <div>
+        <div className="Show">
             <MakeupDetails />
         </div>
     );

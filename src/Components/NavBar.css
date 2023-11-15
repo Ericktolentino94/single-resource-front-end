@@ -1,40 +1,44 @@
 nav {
-    background-color: #ffc8dd; /* Background color */
-    color: pink; /* Text color */
-    padding: 10px 0; /* Padding at the top and bottom */
-  }
-  
-  h1 {
-    margin: 0; /* Remove margin to align text with the top of the nav bar */
-    font-size: 24px; /* Font size for the title */
-  }
-  
-  h1 a {
-    text-decoration: none; /* Remove underlines from links */
-    color: #11bbad; /* Text color for the link */
-  }
-  
-  button {
-    background-color: lightblue; 
-    color: pink; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffc8dd;
+    color: pink;
+    padding: 10px 0;
+    z-index: 1000; 
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: rgb(156, 210, 228);
+}
+
+button {
+    background-color: lightblue;
+    color: pink;
     border: none;
-    padding: 10px 20px; /* Button padding */
-    margin-top: 10px; /* Add margin to separate the button from the title */
-  }
-  
-  button a {
-    color: pink; 
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+button a {
+    color: pink;
     border: none;
     margin-top: 10px;
-  }
-  
+}
 
-  button:hover {
-    background-color: rgb(69, 133, 160);
-    cursor: pointer; 
-  }
-  
-  Nav {
+button:hover {
+    background-color: rgb(146, 201, 224);
+    cursor: pointer;
+}
+
+nav {
     display: flex;
     justify-content: space-around;
-  }
+}
