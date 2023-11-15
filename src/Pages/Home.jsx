@@ -1,5 +1,3 @@
-import Makeups from "../Components/Makeups";
-
 function Home() {
   return (
     <div>
