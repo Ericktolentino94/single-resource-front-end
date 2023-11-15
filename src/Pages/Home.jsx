@@ -1,6 +1,6 @@
-import newInventoryImage from '../assets/new-inventory.jpeg';
-import trackInventoryImage from '../assets/track-inventory.jpeg';
-import manageInventoryImage from '../assets/manage-inventory.avif';
+import newInventoryImage from "../assets/new-inventory.jpeg";
+import trackInventoryImage from "../assets/track-inventory.jpeg";
+import manageInventoryImage from "../assets/manage-inventory.avif";
 
 function Home() {
   return (
@@ -13,7 +13,7 @@ function Home() {
         <h2>Add New Inventory</h2>
         <img
           className="new-inventory"
-          src={new- inventory}
+          src={newInventoryImage}
           alt="cartoon checks new inventory"
         />
       </section>
