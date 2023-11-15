@@ -1,8 +1,9 @@
-import Makeups from "../Components/Makeups";
+
+import "./Home.css"
 
 function Home() {
   return (
-    <div>
+    <div className="Home">
       <h1>
         Boost Your Make Up Collection And Your Bottom Line With Organized
         Inventory Management
