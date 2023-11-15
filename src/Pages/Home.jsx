@@ -1,4 +1,9 @@
 
+import newInventoryImage from "../assets/new-inventory.jpeg";
+import trackInventoryImage from "../assets/track-inventory.jpeg";
+import manageInventoryImage from "../assets/manage-inventory.avif";
+
+
 import "./Home.css"
 
 function Home() {
@@ -12,7 +17,7 @@ function Home() {
         <h2>Add New Inventory</h2>
         <img
           className="new-inventory"
-          src="single-resource-front-end/src/assets/new-inventory.jpeg"
+          src={newInventoryImage}
           alt="cartoon checks new inventory"
         />
       </section>
@@ -20,7 +25,7 @@ function Home() {
         <h2>Track Your Inventory</h2>
         <img
           className="track-inventory"
-          src="single-resource-front-end/src/assets/track-inventory.jpeg"
+          src={trackInventoryImage}
           alt="cartoon checks boxes for inventory"
         />
       </section>
@@ -28,7 +33,7 @@ function Home() {
         <h2>Manage Your Inventory</h2>
         <img
           className="manage-inventory"
-          src="single-resource-front-end/src/assets/manage-inventory.avif"
+          src={manageInventoryImage}
           alt="cartoon warehouse worker checks inventory"
         />
       </section>
