@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import "./MakeupDetails.css"
 
+
 const API = import.meta.env.VITE_API_URL;
 
 function MakeupDetails() {
@@ -38,7 +39,7 @@ function MakeupDetails() {
         </div>
         <div className="card-body">
           <h4 className="card-title"> {makeup.name}</h4>
-          <p className="card-text"><img src={makeup.image} height="200px" alt={makeup.name} className="img-fluid" /></p>
+          <p className="card-text"><img src={makeup.image} alt={makeup.name} className="img-fluid" /></p>
           <p className="card-text"> <a href={makeup.link} target="_blank" rel="noopener noreferrer">View Product</a> </p>
           <p className="card-text">Category: {makeup.category}</p>
           <p className="card-text">Cost: ${makeup.cost}</p>
