@@ -15,7 +15,7 @@ function MakeupDetails() {
     fetch(`${API}/makeups/${id}`)
       .then((response) => response.json())
       .then((responseJSON) => {
-        setMakeup(responseJSON);
+        setMakeup(responseJSON); 
       })
       .catch((error) => console.log(error));
   }, [id, API]);
