@@ -1,10 +1,15 @@
 div {
   text-align: center;
+<<<<<<< HEAD
   margin: 50px;
+=======
+  margin: 15px;
+>>>>>>> 9c77cd0 ( Add styling to Home page.)
 }
 
 h1 {
   font-size: 25px;
+<<<<<<< HEAD
   margin: 25px;
   color: #b76e79;
   text-shadow: 2px 2px 3px #090607;
@@ -15,13 +20,18 @@ h1 {
 h1:hover {
   background-color: #ffe6ec;
   border-radius: 25px;
+=======
+>>>>>>> 9c77cd0 ( Add styling to Home page.)
 }
 
 section {
   margin: 20px;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
+=======
+>>>>>>> 9c77cd0 ( Add styling to Home page.)
 }
 
 img {
@@ -29,8 +39,11 @@ img {
   height: auto;
   border: 4px solid #ebacac;
   border-radius: 8px;
+<<<<<<< HEAD
   margin-bottom: 12px;
   transition: border-radius 0.4s;
+=======
+>>>>>>> 9c77cd0 ( Add styling to Home page.)
 }
 
 .new-inventory {
