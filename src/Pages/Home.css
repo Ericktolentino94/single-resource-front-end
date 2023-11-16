@@ -1,9 +1,17 @@
+
+div {
+  text-align: center;
+
+  margin: 50px;
+
+  margin: 15px;
 main {
   padding: 50px;
 }
 
 h1 {
   font-size: 25px;
+
   margin: 25px;
   color: #b76e79;
   text-shadow: 2px 2px 3px #090607;
@@ -18,6 +26,7 @@ h1:hover {
 
 .section {
   margin: 20px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,21 +37,19 @@ img {
   height: auto;
   border: 4px solid #ebacac;
   border-radius: 8px;
+
   margin-bottom: 12px;
   transition: border-radius 0.4s;
 }
 
-.new-inventory {
-  max-width: 80%;
-  height: 100px;
-}
-
-.track-inventory {
-  max-width: 70%;
-  height: 100px;
-}
-
+.new-inventory,
+.track-inventory,
 .manage-inventory {
-  max-width: 60%;
-  height: 100px;
+  max-width: 100%;
+  gap: 20px;
 }
+
+.home-inventory {
+  display: flex;
+  flex-direction: row;
+

@@ -2,6 +2,11 @@ import newInventoryImage from "../assets/new-inventory.jpeg";
 import trackInventoryImage from "../assets/track-inventory.jpeg";
 import manageInventoryImage from "../assets/manage-inventory.avif";
 
+
+import "./Home.css";
+
+
+
 function Home() {
   return (
     <div>
@@ -9,7 +14,8 @@ function Home() {
         Boost Your Make Up Collection And Your Bottom Line With Organized
         Inventory Management
       </h1>
-      <div className="section">
+      <div className="home-inventory">
+     
         <section>
           <h2>Add New Inventory</h2>
           <img
