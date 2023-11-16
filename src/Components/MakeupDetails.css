@@ -1,5 +1,15 @@
+.makeup-container.card {
+    background-color: pink;
+}
+
+.makeup-image.card-img-top {
+    background-color: white;
+    height: 200px;
+}
 .card-body {
     align-items: center;
+    background-color: lightblue;
+
 }
 
 h3 {

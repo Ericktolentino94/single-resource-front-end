@@ -1,9 +1,12 @@
+
 div {
   text-align: center;
 
   margin: 50px;
 
   margin: 15px;
+main {
+  padding: 50px;
 }
 
 h1 {
@@ -21,7 +24,7 @@ h1:hover {
   border-radius: 25px;
 }
 
-section {
+.section {
   margin: 20px;
 
   display: flex;
@@ -49,4 +52,4 @@ img {
 .home-inventory {
   display: flex;
   flex-direction: row;
-}
+

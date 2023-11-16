@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const API = "http://localhost:8888";
+const API = import.meta.env.VITE_API_URL;
 
 function MakeupEditForm() {
   let { id } = useParams();
@@ -22,10 +22,10 @@ function MakeupEditForm() {
 
   const updateMakeup = () => {
     fetch(`${API}/makeups/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       body: JSON.stringify(makeup),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     })
       .then((response) => {
@@ -60,7 +60,9 @@ function MakeupEditForm() {
     <div className="Edit container mt-4">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name:</label>
+          <label htmlFor="name" className="form-label">
+            Name:
+          </label>
           <input
             id="name"
             value={makeup.name}
@@ -72,7 +74,9 @@ function MakeupEditForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="image" className="form-label">Image URL:</label>
+          <label htmlFor="image" className="form-label">
+            Image URL:
+          </label>
           <input
             id="image"
             type="text"
@@ -83,7 +87,9 @@ function MakeupEditForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="link" className="form-label">Link:</label>
+          <label htmlFor="link" className="form-label">
+            Link:
+          </label>
           <input
             id="link"
             type="text"
@@ -94,7 +100,9 @@ function MakeupEditForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="category" className="form-label">Category:</label>
+          <label htmlFor="category" className="form-label">
+            Category:
+          </label>
           <input
             id="category"
             type="text"
@@ -105,7 +113,9 @@ function MakeupEditForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="cost" className="form-label">Cost:</label>
+          <label htmlFor="cost" className="form-label">
+            Cost:
+          </label>
           <input
             id="cost"
             type="number"
@@ -119,7 +129,9 @@ function MakeupEditForm() {
         <input type="submit" className="btn btn-primary" />
       </form>
       <Link to={`/makeups/${id}`}>
-        <button className="btn btn-secondary mt-2">Return to Makeup Show Page</button>
+        <button className="btn btn-secondary mt-2">
+          Return to Makeup Show Page
+        </button>
       </Link>
     </div>
   );
