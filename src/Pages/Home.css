@@ -16,23 +16,33 @@ h1:hover {
   border-radius: 25px;
 }
 
-section {
+.section {
   margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
+img {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #ebacac;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: border-radius 0.4s;
+}
 
 .new-inventory {
   max-width: 80%;
+  height: 100px;
 }
 
 .track-inventory {
   max-width: 70%;
+  height: 100px;
 }
 
 .manage-inventory {
   max-width: 60%;
+  height: 100px;
 }

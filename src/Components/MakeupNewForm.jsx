@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const API = "http://localhost:8888";
+const API = import.meta.env.VITE_API_URL;
 
 function NewMakeupForm() {
   const navigate = useNavigate();
@@ -43,7 +43,9 @@ function NewMakeupForm() {
     <div className="New container mt-4">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name:</label>
+          <label htmlFor="name" className="form-label">
+            Name:
+          </label>
           <input
             id="name"
             value={makeup.name}
@@ -55,7 +57,9 @@ function NewMakeupForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="image" className="form-label">Image URL:</label>
+          <label htmlFor="image" className="form-label">
+            Image URL:
+          </label>
           <input
             id="image"
             value={makeup.image}
@@ -67,7 +71,9 @@ function NewMakeupForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="link" className="form-label">Link:</label>
+          <label htmlFor="link" className="form-label">
+            Link:
+          </label>
           <input
             id="link"
             value={makeup.link}
@@ -79,7 +85,9 @@ function NewMakeupForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="category" className="form-label">Category:</label>
+          <label htmlFor="category" className="form-label">
+            Category:
+          </label>
           <input
             id="category"
             value={makeup.category}
@@ -91,7 +99,9 @@ function NewMakeupForm() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="cost" className="form-label">Cost:</label>
+          <label htmlFor="cost" className="form-label">
+            Cost:
+          </label>
           <input
             id="cost"
             value={makeup.cost}
