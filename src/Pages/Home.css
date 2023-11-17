@@ -1,10 +1,10 @@
-
 div {
   text-align: center;
 
   margin: 50px;
 
   margin: 15px;
+}
 main {
   padding: 50px;
 }
@@ -52,4 +52,4 @@ img {
 .home-inventory {
   display: flex;
   flex-direction: row;
-
+}
