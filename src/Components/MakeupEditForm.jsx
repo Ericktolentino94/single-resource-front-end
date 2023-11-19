@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
-const API = "http://localhost:8888";
+const API = import.meta.env.VITE_API_URL;
 
 function MakeupEditForm() {
   let { id } = useParams();
